@@ -52,6 +52,10 @@ Prettier, Tailwind CSS IntelliSense
 
 ## Project conventions
 
+`https://dev.to/itswillt/folder-structures-in-react-projects-3dp8`
+
+`https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md`
+
 ### 1. File naming (`kebab-case`)
 
 ```bash
@@ -87,3 +91,27 @@ Example: const ThisIsEnumName {...}
 ```bash
 Example: const ThisIsInterfaceName {...}
 ```
+
+## Project page folder structure pattern
+
+<pre>
+📦 pages
+├── 📂 page-name
+│ ├── 📂 api
+│ ├── 📂 components
+│ │ ├── 📜 component-1.tsx
+│ │ ├── 📜 component-2.tsx
+│ │ ├── 📂 another-component
+│ │ │ ├── 📂 api
+│ │ │ ├── 📂 components
+│ │ │ │ ├── 📜 component-1.1.tsx
+│ │ │ │ ├── 📜 component-2.1.tsx
+│ │ │ ├── 📂 hooks
+│ │ │ ├── 📂 types
+│ │ │ ├── 📂 utils
+│ ├── 📂 hooks
+│ ├── 📂 types
+│ ├── 📂 utils
+│ ├── 📂 views
+│ │ ├── 📜 index.tsx
+ </pre>
