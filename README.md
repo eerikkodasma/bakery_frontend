@@ -52,9 +52,9 @@ Prettier, Tailwind CSS IntelliSense
 
 ## Project conventions
 
-`https://dev.to/itswillt/folder-structures-in-react-projects-3dp8`
+Folder structure link 1: [https://dev.to/itswillt/folder-structures-in-react-projects-3dp8](https://dev.to/itswillt/folder-structures-in-react-projects-3dp8)
 
-`https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md`
+Folder structure link 2: [https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md](https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md)
 
 ### 1. File naming (`kebab-case`)
 
@@ -115,3 +115,15 @@ Example: const ThisIsInterfaceName {...}
 │ ├── 📂 views
 │ │ ├── 📜 index.tsx
  </pre>
+
+## Extra links
+
+Design tips: [https://www.hostinger.com/tutorials/web-design-best-practices?utm_campaign=Generic-Tutorials-DSA|NT:Se|LO:Other-EU&utm_medium=ppc&gad_source=1&gclid=CjwKCAiA74G9BhAEEiwA8kNfpftbNl2OWPEoE5ACNuruL6qWKjNohGAbt4i1zeM9dkHespkojq_DihoCixsQAvD_BwE](https://www.hostinger.com/tutorials/web-design-best-practices?utm_campaign=Generic-Tutorials-DSA|NT:Se|LO:Other-EU&utm_medium=ppc&gad_source=1&gclid=CjwKCAiA74G9BhAEEiwA8kNfpftbNl2OWPEoE5ACNuruL6qWKjNohGAbt4i1zeM9dkHespkojq_DihoCixsQAvD_BwE)
+
+Fonts to use: [https://www.hostinger.com/tutorials/best-html-web-fonts](https://www.hostinger.com/tutorials/best-html-web-fonts)
+
+Color palette links:
+
+- [https://www.realtimecolors.com/](https://www.realtimecolors.com/)
+- [https://coolors.co/palettes/popular](https://coolors.co/palettes/popular)
+- [https://color.adobe.com/create/color-wheel](https://color.adobe.com/create/color-wheel)
