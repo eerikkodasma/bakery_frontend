@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* Remove tailwind inital colors */
-  --color-*: initial;
+  /* Type scale */
+  --text-default-size: 14px; /* Mobile default size */
+  --text-default-scale-ratio: 1.125; /* Minor second type scale */
 
-  --color-custom-text: hsla(0, 49, 8, 1);
-  --color-custom-background: hsla(0, 40, 98, 1);
+  /* Breakpoints. If you are modifing values, then you have to change @media query also */
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-desktop: 1536px;
 
-  --color-custom-primary: hsla(5, 49, 53, 1);
-  --color-custom-secondary: hsla(43, 49, 72, 1);
-  --color-custom-accent: hsla(48, 49, 60, 1);
-
-  --font-custom-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+  /* Font */
+  --font-default: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 
   /* Remove unused tailwind default font sizes */
@@ -25,24 +26,129 @@
   --text-9xl: initial;
 }
 
+@theme {
+  /* Remove tailwind inital colors */
+  --color-*: initial;
+
+  --color-white: hsla(0, 0%, 100%, 1);
+
+  /* Text shades */
+  --color-text-50: hsla(0, 46%, 95%, 1);
+  --color-text-100: hsla(0, 49%, 90%, 1);
+  --color-text-200: hsla(0, 49%, 80%, 1);
+  --color-text-300: hsla(0, 49%, 70%, 1);
+  --color-text-400: hsla(0, 49%, 60%, 1);
+  --color-text-500: hsla(0, 49%, 50%, 1);
+  --color-text-600: hsla(0, 49%, 40%, 1);
+  --color-text-700: hsla(0, 49%, 30%, 1);
+  --color-text-800: hsla(0, 49%, 20%, 1);
+  --color-text-700-default: hsla(0, 49%, 8%, 1);
+  --color-text-950: hsla(0, 46%, 5%, 1);
+
+  /* Background shades */
+  --color-background-50-default: hsla(0, 40%, 98%, 1);
+  --color-background-100: hsla(0, 41%, 90%, 1);
+  --color-background-200: hsla(0, 39%, 80%, 1);
+  --color-background-300: hsla(0, 40%, 70%, 1);
+  --color-background-400: hsla(0, 40%, 60%, 1);
+  --color-background-500: hsla(0, 40%, 50%, 1);
+  --color-background-600: hsla(0, 40%, 40%, 1);
+  --color-background-700: hsla(0, 40%, 30%, 1);
+  --color-background-800: hsla(0, 39%, 20%, 1);
+  --color-background-900: hsla(0, 41%, 10%, 1);
+  --color-background-950: hsla(0, 38%, 5%, 1);
+
+  /* Primary shades */
+  --color-primary-50: hsla(0, 46%, 95%, 1);
+  --color-primary-100: hsla(0, 49%, 90%, 1);
+  --color-primary-200: hsla(0, 49%, 80%, 1);
+  --color-primary-300: hsla(0, 49%, 70%, 1);
+  --color-primary-400: hsla(0, 49%, 60%, 1);
+  --color-primary-500-default: hsla(5, 49%, 50%, 1);
+  --color-primary-600: hsla(0, 49%, 40%, 1);
+  --color-primary-700: hsla(0, 49%, 30%, 1);
+  --color-primary-800: hsla(0, 49%, 20%, 1);
+  --color-primary-900: hsla(0, 49%, 10%, 1);
+  --color-primary-950: hsla(0, 46%, 5%, 1);
+
+  /* Secondary shades */
+  --color-secondary-50: hsla(45, 46%, 95%, 1);
+  --color-secondary-100: hsla(43, 49%, 90%, 1);
+  --color-secondary-200: hsla(43, 49%, 80%, 1);
+  --color-secondary-300-default: hsla(43, 49%, 70%, 1);
+  --color-secondary-400: hsla(43, 49%, 60%, 1);
+  --color-secondary-500: hsla(43, 49%, 50%, 1);
+  --color-secondary-600: hsla(43, 49%, 40%, 1);
+  --color-secondary-700: hsla(43, 49%, 30%, 1);
+  --color-secondary-800: hsla(43, 49%, 20%, 1);
+  --color-secondary-900: hsla(43, 49%, 10%, 1);
+  --color-secondary-950: hsla(40, 46%, 5%, 1);
+
+  /* Accent shades */
+  --color-accent-50: hsla(50, 46%, 95%, 1);
+  --color-accent-100: hsla(48, 49%, 90%, 1);
+  --color-accent-200: hsla(48, 49%, 80%, 1);
+  --color-accent-300: hsla(48, 49%, 70%, 1);
+  --color-accent-500-default: hsla(48, 49%, 60%, 1);
+  --color-accent-500: hsla(48, 49%, 50%, 1);
+  --color-accent-600: hsla(48, 49%, 40%, 1);
+  --color-accent-700: hsla(48, 49%, 30%, 1);
+  --color-accent-800: hsla(48, 49%, 20%, 1);
+  --color-accent-900: hsla(48, 49%, 10%, 1);
+  --color-accent-950: hsla(45, 46%, 5%, 1);
+}
+
 /* Lisa erinevate ekraani suurustele erinevad font-size (Type scale) */
 @layer base {
+  html {
+    height: 100%;
+  }
+
   h1 {
-    font-size: 3rem;
+    font-size: calc(
+      var(--text-default-size) * pow(var(--text-default-scale-ratio), 6)
+    );
   }
   h2 {
-    font-size: 2rem;
+    font-size: calc(
+      var(--text-default-size) * pow(var(--text-default-scale-ratio), 5)
+    );
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: calc(
+      var(--text-default-size) * pow(var(--text-default-scale-ratio), 4)
+    );
   }
   h4 {
-    font-size: 1.5rem;
+    font-size: calc(
+      var(--text-default-size) * pow(var(--text-default-scale-ratio), 3)
+    );
   }
   h5 {
-    font-size: 1.25rem;
+    font-size: calc(
+      var(--text-default-size) * pow(var(--text-default-scale-ratio), 2)
+    );
   }
-  h5 {
-    font-size: 1.1rem;
+  h6 {
+    font-size: calc(
+      var(--text-default-size) * pow(var(--text-default-scale-ratio), 1)
+    );
+  }
+
+  input {
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+}
+
+@layer base {
+  @media (width >= 768px) {
+    :root {
+      --text-default-size: 16px;
+    }
+  }
+  @media (width >= 1536px) {
+    :root {
+      --text-default-size: 18px;
+    }
   }
 }
