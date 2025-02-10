@@ -1,8 +1,8 @@
 interface Props {
   ariaLabel: string;
   id?: string;
-  placeholder?: string;
   className?: string;
+  [x: string]: any;
 }
 
 export default function Input({
@@ -10,13 +10,14 @@ export default function Input({
   placeholder,
   className,
   ariaLabel,
+  ...rest
 }: Props) {
   return (
     <input
       id={id}
-      placeholder={placeholder}
       className={`rounded-md border px-3 py-2 ${className}`}
       aria-label={ariaLabel}
+      {...rest}
     />
   );
 }

@@ -41,7 +41,7 @@ export default function Button({
     <button
       onClick={onClick}
       type={actionType}
-      className={`rounded px-4 py-2 text-white active:outline-2 disabled:pointer-events-none disabled:opacity-20 ${styles[type]} ${className}`}
+      className={`rounded px-4 py-2 text-white active:outline-2 disabled:cursor-not-allowed disabled:opacity-20 ${styles[type]} ${className}`}
       aria-label={ariaLabel}
       disabled={disabled}
     >
