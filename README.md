@@ -127,3 +127,7 @@ Color palette links:
 - [https://www.realtimecolors.com/](https://www.realtimecolors.com/)
 - [https://coolors.co/palettes/popular](https://coolors.co/palettes/popular)
 - [https://color.adobe.com/create/color-wheel](https://color.adobe.com/create/color-wheel)
+
+Icons from tabler: [https://tabler.io/icons](https://tabler.io/icons)
+
+Performance optimization: [https://www.youtube.com/watch?v=CaShN6mCJB0](https://www.youtube.com/watch?v=CaShN6mCJB0)
